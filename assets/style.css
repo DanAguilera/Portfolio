@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Used the root element to target all font sizes rather than adding a class to individual sections */
+/* As well as added variables to the mix to then be able to use them for the body*/
+:root {
+    --ff-primary: 'Raleway','sans-serif';
+    --ff-secondary: 'Antonio','sans-serif';
+
+    --fw-reg: 300;
+    --fw-bold:900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #a9a9a9;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+/* Adding this media query when using bigger screens and adding the root element in it to automatically change to the following font sizes when it reaches the alloted pixel size */
+@media (min-width: 800px)  {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+/*General Styling*/
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+}
+
